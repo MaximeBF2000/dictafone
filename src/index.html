@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictafone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="titlebar" data-tauri-drag-region></div>
+
+  <main data-tauri-drag-region>
+    <section class="recorder" data-tauri-drag-region>
+      <div class="visual" data-tauri-drag-region>
+        <canvas id="wave" data-tauri-drag-region></canvas>
+        <div id="timer" class="timer" data-tauri-drag-region>00:00</div>
+      </div>
+
+      <div class="controls" id="idle-controls" data-tauri-drag-region>
+        <button id="start" class="record" title="Start recording" aria-label="Start recording">
+          <span class="dot"></span>
+        </button>
+      </div>
+
+      <div class="controls hidden" id="rec-controls" data-tauri-drag-region>
+        <button id="cancel" class="secondary">Cancel</button>
+        <button id="stop" class="stop" title="Stop and save" aria-label="Stop and save">
+          <span class="square"></span>
+        </button>
+        <span class="spacer-btn"></span>
+      </div>
+
+      <div id="status" class="status" data-tauri-drag-region></div>
+    </section>
+
+    <section class="storage" data-tauri-drag-region>
+      <label for="path" data-tauri-drag-region>Save to</label>
+      <div class="path-row">
+        <input id="path" type="text" spellcheck="false" autocomplete="off" />
+        <button id="browse" class="secondary">Choose…</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
